@@ -1,12 +1,16 @@
 import React from "react";
 import { createStore } from "redux";
 import rootReducer from "./rootReducer";
-import logo from "./logo.svg";
 import "./App.css";
 import { Provider } from "react-redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import AddToDo from "./modules/AddToDo/AddToDo";
 
-const store = createStore(rootReducer, {});
+const store = createStore(
+    rootReducer,
+    {},
+    composeWithDevTools()
+    );
 
 function App() {
   return (

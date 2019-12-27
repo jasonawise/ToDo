@@ -1,13 +1,21 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-class AddToDo extends Component {
-  render() {
+const AddToDo = ({ messageVisibility, dispatch }) => {
     return (
-      <div>
-        <h1>Add To Do</h1>
-      </div>
+        <div>
+            {messageVisibility &&
+                <h1>Add To Do</h1>
+            }
+            <button>Add Me</button>
+        </div>
     );
-  }
-}
+};
 
-export default AddToDo;
+const mapStateToProps = state => ({
+    messageVisibility: state.message.messageVisibility,
+});
+
+// const mapDispatchToProps =
+
+export default connect(mapStateToProps)(AddToDo);
