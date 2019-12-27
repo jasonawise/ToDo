@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addToDo } from "./actions/actions";
 
-const AddToDo = ({ messageVisibility, toogleMessage }) => {
+const AddToDo = ({ messageVisibility, addToDo }) => {
     return (
         <div>
             {messageVisibility &&
                 <h1>Add To Do</h1>
             }
-            <button onClick={toogleMessage}>Add Me</button>
+            <button onClick={addToDo}>Add Me</button>
         </div>
     );
 };
