@@ -4,7 +4,7 @@ import rootReducer from "./rootReducer";
 import logo from "./logo.svg";
 import "./App.css";
 import { Provider } from "react-redux";
-import AddToDo from "./Modules/AddToDo/AddToDo";
+import AddToDo from "./modules/AddToDo/AddToDo";
 
 const store = createStore(rootReducer, {});
 
