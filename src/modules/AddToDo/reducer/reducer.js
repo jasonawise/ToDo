@@ -1,4 +1,4 @@
-import { TOOGLE_MESSAGE } from "../actions/actions";
+import { ADD_TODO } from "../actions/actions";
 
 const initialState = {
     messageVisibility: false
@@ -8,11 +8,11 @@ export default function (state= initialState, action) {
     const { type } = action;
 
     switch (type) {
-        case TOOGLE_MESSAGE:
+        case ADD_TODO:
             return ({
                 ...state,
                 messageVisibility: !state.messageVisibility
-            })
+            });
         default:
             return state;
     }

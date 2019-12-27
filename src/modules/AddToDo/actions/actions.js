@@ -1,7 +1,7 @@
-export const TOOGLE_MESSAGE = "TOOGLE_MESSAGE";
+export const ADD_TODO = "ADD_TODO";
 
-export function toogleMessage() {
+export function addToDo() {
     return ({
-        type: "TOOGLE_MESSAGE",
+        type: "ADD_TODO",
     })
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { toogleMessage } from "./actions/actions";
+import { addToDo } from "./actions/actions";
 
 const AddToDo = ({ messageVisibility, toogleMessage }) => {
     return (
@@ -18,6 +18,6 @@ const mapStateToProps = state => ({
     messageVisibility: state.message.messageVisibility,
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators({ toogleMessage, }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ addToDo, }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddToDo);
