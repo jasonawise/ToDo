@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-const ToDoList = ({ messageVisibility }) => {
+const ToDoList = ({ messageVisibility, todo}) => {
     return (
         <div>
             { messageVisibility &&
-                <h1>My To DO</h1>
+                <h1>{todo}</h1>
             }
         </div>
     );
@@ -13,6 +13,7 @@ const ToDoList = ({ messageVisibility }) => {
 
 const mapStateToProps = state => ({
     messageVisibility: state.message.messageVisibility,
+    todo: state.message.todo
 });
 
 export default connect(mapStateToProps)(ToDoList);

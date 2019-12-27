@@ -1,7 +1,8 @@
 import { ADD_TODO } from "../actions/actions";
 
 const initialState = {
-    messageVisibility: false
+    messageVisibility: false,
+    todo: "Finish this app"
 };
 
 export default function (state= initialState, action) {
