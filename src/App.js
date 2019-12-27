@@ -5,6 +5,7 @@ import "./App.css";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import AddToDo from "./modules/AddToDo/AddToDo";
+import ToDoList from "./modules/ToDoList/ToDoList";
 
 const store = createStore(
     rootReducer,
@@ -17,6 +18,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <AddToDo />
+        <ToDoList/>
       </div>
     </Provider>
   );
